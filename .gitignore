@@ -2,4 +2,4 @@
 *.user
 *.sln.docstates
 .vs/
-*.webtile
+[Bb]in
