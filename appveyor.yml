@@ -5,5 +5,5 @@ build_script:
 
 artifacts:
   - path: src/bin/*.webtile
-    name: StockTicker
-    type: Web Tile
+    name: Web Tile
+    type: zip
