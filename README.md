@@ -5,6 +5,10 @@
 A tile for the Microsoft Band that shows stock quotes
 for MSFT, APPL, GOOG and YHOO.
 
+![Band logo tile](art/logo.png)
+
+![Band tile details](art/tile.png)
+
 Download the
 [latest CI buld](https://ci.appveyor.com/project/madskristensen/stocktickerwebtile/build/artifacts)
 from AppVeyor.
