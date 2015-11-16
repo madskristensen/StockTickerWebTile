@@ -4,6 +4,6 @@ build_script:
   - build.cmd src stockticker
 
 artifacts:
-  - path: '*.webtile'
+  - path: src/bin/*.webtile
     name: StockTicker
     type: Web Tile
