@@ -3,8 +3,15 @@
     "build": {
       "fileName": "cmd.exe",
       "workingDirectory": ".",
-      "arguments": "/c build.cmd"
+      "arguments": "/c build.cmd src stockticker"
+    },
+    "clean": {
+      "fileName": "cmd.exe",
+      "workingDirectory": ".",
+      "arguments": "/c rmdir src\\bin /S /Q"
     }
   },
-  "-vs-binding": { "BeforeBuild": [ "build" ] }
+  "-vs-binding": {
+    "BeforeBuild": [ "build" ]
+  }
 }

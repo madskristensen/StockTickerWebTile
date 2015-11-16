@@ -9,9 +9,14 @@ for MSFT, APPL, GOOG and YHOO.
 
 ![Band tile details](art/tile.png)
 
-Download the
-[latest CI buld](https://ci.appveyor.com/project/madskristensen/stocktickerwebtile/build/artifacts)
-from AppVeyor.
+### Download
+Any Web Tile for the Microsoft Band is a zip file with the
+file extension **.webtile**. Simply download the file on
+a phone that has the Microsoft Health app installed
+and it will be added to your Band.
+
+[Download the latest build](https://ci.appveyor.com/project/madskristensen/stocktickerwebtile/build/artifacts)
+from your phone now.
 
 ### Fork the project
 A web tile is just a JSON file and images. This project
