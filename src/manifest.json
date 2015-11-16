@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "name": "Stock Ticker",
-  "description": "MSFT, APPL, GOOG and YHOO stock ticker",
+  "description": "MSFT, APPL, GOOG, YHOO and FB stock ticker",
   "version": 1,
   "versionString": "1",
   "author": "Mads Kristensen",
@@ -17,12 +17,13 @@
     "icon1": "icons/icon1.png",
     "icon2": "icons/icon2.png",
     "icon3": "icons/icon3.png",
-    "icon4": "icons/icon4.png"
+    "icon4": "icons/icon4.png",
+    "icon5": "icons/icon5.png"
   },
   "refreshIntervalMinutes": 30,
   "resources": [
     {
-      "url": "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22MSFT%22%2C%22AAPL%22%2C%22GOOG%22%2C%22YHOO%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json",
+      "url": "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22MSFT%22%2C%22AAPL%22%2C%22GOOG%22%2C%22YHOO%22%2C%22FB%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json",
       "style": "Simple",
       "content": {
         "symbol1": "query.results.quote[0].symbol",
@@ -36,7 +37,10 @@
         "price3": "query.results.quote[2].LastTradePriceOnly",
         "symbol4": "query.results.quote[3].symbol",
         "change4": "query.results.quote[3].Change",
-        "price4": "query.results.quote[3].LastTradePriceOnly"
+        "price4": "query.results.quote[3].LastTradePriceOnly",
+        "symbol5": "query.results.quote[4].symbol",
+        "change5": "query.results.quote[4].Change",
+        "price5": "query.results.quote[4].LastTradePriceOnly"
       }
     }
   ],
@@ -154,6 +158,35 @@
         {
           "elementId": "22",
           "value": "{{price4}}"
+        }
+      ]
+    },
+    {
+      "layout": "MSBand_SingleMetricWithSecondary",
+      "condition": "true",
+      "iconBindings": [
+        {
+          "elementId": "21",
+          "conditions": [
+            {
+              "condition": "true",
+              "icon": "icon5"
+            }
+          ]
+        }
+      ],
+      "textBindings": [
+        {
+          "elementId": "11",
+          "value": "{{symbol5}}"
+        },
+        {
+          "elementId": "12",
+          "value": "{{change5}}"
+        },
+        {
+          "elementId": "22",
+          "value": "{{price5}}"
         }
       ]
     }
