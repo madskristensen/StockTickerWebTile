@@ -20,12 +20,16 @@
     "icon4": "icons/icon4.png",
     "icon5": "icons/icon5.png"
   },
+  "tileTheme": {
+    "secondary": "869a9c"
+  },
   "refreshIntervalMinutes": 30,
   "resources": [
     {
       "url": "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22MSFT%22%2C%22AAPL%22%2C%22GOOG%22%2C%22YHOO%22%2C%22FB%22)%0A%09%09&env=http%3A%2F%2Fdatatables.org%2Falltables.env&format=json",
       "style": "Simple",
       "content": {
+        "updated": "query.created",
         "symbol1": "query.results.quote[0].symbol",
         "change1": "query.results.quote[0].Change",
         "price1": "query.results.quote[0].LastTradePriceOnly",
@@ -187,6 +191,20 @@
         {
           "elementId": "22",
           "value": "{{price5}}"
+        }
+      ]
+    },
+    {
+      "layout": "MSBand_ScrollingText",
+      "condition": "true",
+      "textBindings": [
+        {
+          "elementId": "1",
+          "value": "Last updated"
+        },
+        {
+          "elementId": "2",
+          "value": "{{updated}}"
         }
       ]
     }
