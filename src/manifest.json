@@ -21,7 +21,12 @@
     "icon5": "icons/icon5.png"
   },
   "tileTheme": {
-    "secondary": "869a9c"
+    "base": "00b9f2",
+    "highlight": "5ae0ff",
+    "lowlight": "00b2db",
+    "secondary": "869a9c",
+    "highContrast": "0dd1ff",
+    "muted": "0086a5"
   },
   "refreshIntervalMinutes": 30,
   "resources": [
